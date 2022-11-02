@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4647,6 +4647,48 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="frames" urn="urn:adsk.eagle:library:229">
+<description>&lt;b&gt;Frames for Sheet and Layout&lt;/b&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="A5L-LOC" urn="urn:adsk.eagle:symbol:13879/1" library_version="1">
+<wire x1="85.09" y1="3.81" x2="85.09" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="85.09" y1="24.13" x2="139.065" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="24.13" x2="180.34" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="170.18" y1="3.81" x2="170.18" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="170.18" y1="8.89" x2="180.34" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="170.18" y1="8.89" x2="139.065" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="8.89" x2="139.065" y2="3.81" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="8.89" x2="139.065" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="13.97" x2="180.34" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="13.97" x2="139.065" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="19.05" x2="180.34" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="139.065" y1="19.05" x2="139.065" y2="24.13" width="0.1016" layer="94"/>
+<text x="140.97" y="15.24" size="2.54" layer="94">&gt;DRAWING_NAME</text>
+<text x="140.97" y="10.16" size="2.286" layer="94">&gt;LAST_DATE_TIME</text>
+<text x="154.305" y="5.08" size="2.54" layer="94">&gt;SHEET</text>
+<text x="140.716" y="4.953" size="2.54" layer="94">Sheet:</text>
+<frame x1="0" y1="0" x2="184.15" y2="133.35" columns="4" rows="4" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DINA5_L" urn="urn:adsk.eagle:component:13932/1" prefix="FRAME" uservalue="yes" library_version="1">
+<description>&lt;b&gt;FRAME&lt;/b&gt;&lt;p&gt;
+DIN A5, landscape with doc field</description>
+<gates>
+<gate name="G$1" symbol="A5L-LOC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4672,27 +4714,77 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA5_L" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="103.124" y="-30.734" size="2.1844" layer="94">M. Hildebrandt</text>
+<text x="50.8" y="-35.56" size="5.08" layer="94">WAK-Lab</text>
+<text x="50.8" y="-43.18" size="1.9304" layer="94">Nebestraße 24
+99817 Eisenach</text>
 </plain>
 <instances>
-<instance part="G1" gate="G$1" x="12.7" y="2.54" rot="R90"/>
-<instance part="SW1" gate="G$1" x="33.02" y="22.86"/>
-<instance part="R1" gate="G$1" x="63.5" y="7.62" rot="R270"/>
-<instance part="R2" gate="G$1" x="53.34" y="7.62" rot="R270"/>
-<instance part="GND3" gate="1" x="12.7" y="-10.16"/>
-<instance part="GND4" gate="1" x="33.02" y="-10.16"/>
-<instance part="LED3" gate="A" x="33.02" y="-2.54"/>
-<instance part="LED4" gate="A" x="43.18" y="-2.54"/>
-<instance part="LED1" gate="A" x="53.34" y="-2.54"/>
-<instance part="LED2" gate="A" x="63.5" y="-2.54"/>
-<instance part="R3" gate="G$1" x="43.18" y="7.62" rot="R270"/>
-<instance part="R4" gate="G$1" x="33.02" y="7.62" rot="R270"/>
-<instance part="GND6" gate="1" x="63.5" y="-10.16"/>
-<instance part="GND7" gate="1" x="53.34" y="-10.16"/>
-<instance part="GND8" gate="1" x="43.18" y="-10.16"/>
+<instance part="G1" gate="G$1" x="12.7" y="2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="9.525" y="1.27" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="17.78" y="1.27" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SW1" gate="G$1" x="33.02" y="22.86" smashed="yes">
+<attribute name="NAME" x="27.94" y="26.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="27.94" y="15.24" size="1.778" layer="96"/>
+</instance>
+<instance part="R1" gate="G$1" x="63.5" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="64.9986" y="11.43" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="60.198" y="11.43" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="R2" gate="G$1" x="53.34" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="54.8386" y="11.43" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="50.038" y="11.43" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="GND3" gate="1" x="12.7" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="10.16" y="-12.7" size="1.778" layer="96"/>
+</instance>
+<instance part="GND4" gate="1" x="33.02" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="30.48" y="-12.7" size="1.778" layer="96"/>
+</instance>
+<instance part="LED3" gate="A" x="33.02" y="-2.54" smashed="yes">
+<attribute name="NAME" x="35.56" y="-5.08" size="1.524" layer="95"/>
+<attribute name="VALUE" x="35.56" y="-6.985" size="1.524" layer="96"/>
+</instance>
+<instance part="LED4" gate="A" x="43.18" y="-2.54" smashed="yes">
+<attribute name="NAME" x="45.72" y="-5.08" size="1.524" layer="95"/>
+<attribute name="VALUE" x="45.72" y="-6.985" size="1.524" layer="96"/>
+</instance>
+<instance part="LED1" gate="A" x="53.34" y="-2.54" smashed="yes">
+<attribute name="NAME" x="55.88" y="-5.08" size="1.524" layer="95"/>
+<attribute name="VALUE" x="55.88" y="-6.985" size="1.524" layer="96"/>
+</instance>
+<instance part="LED2" gate="A" x="63.5" y="-2.54" smashed="yes">
+<attribute name="NAME" x="66.04" y="-5.08" size="1.524" layer="95"/>
+<attribute name="VALUE" x="66.04" y="-6.985" size="1.524" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="43.18" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="44.6786" y="11.43" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="39.878" y="11.43" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="R4" gate="G$1" x="33.02" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="34.5186" y="11.43" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="29.718" y="11.43" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="GND6" gate="1" x="63.5" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="60.96" y="-12.7" size="1.778" layer="96"/>
+</instance>
+<instance part="GND7" gate="1" x="53.34" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="50.8" y="-12.7" size="1.778" layer="96"/>
+</instance>
+<instance part="GND8" gate="1" x="43.18" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="40.64" y="-12.7" size="1.778" layer="96"/>
+</instance>
+<instance part="FRAME1" gate="G$1" x="-38.1" y="-50.8" smashed="yes">
+<attribute name="DRAWING_NAME" x="102.87" y="-35.56" size="2.54" layer="94"/>
+<attribute name="LAST_DATE_TIME" x="102.87" y="-40.64" size="2.286" layer="94"/>
+<attribute name="SHEET" x="116.205" y="-45.72" size="2.54" layer="94"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4792,6 +4884,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
