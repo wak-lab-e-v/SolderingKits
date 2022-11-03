@@ -1,0 +1,13 @@
+G04 Gerber job file.*
+%TF.FileFunction,JobInfo*%
+%TF.GenerationSoftware,Autodesk,EAGLE,8.6.0*%
+%TF.CreationDate,2022-05-10T19:14:35Z*%
+%TF.Part,Single*%
+%MOMM*%
+%TJ.B_Owner,Angela Markgraf <angela.markgraf@haecker-automation.com>*%
+%TJ.B_ID,robot*%
+%TJ.B_LayerNum,2*%
+%TJ.B_Thickness,1.570000*%
+%TJ.B_Size_X,47.975259*%
+%TJ.B_Size_Y,53.700000*%
+M02*
