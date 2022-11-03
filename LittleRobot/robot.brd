@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -23,21 +23,21 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="10" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="10" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -48,17 +48,17 @@
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="10" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="10" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="10" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="10" visible="yes" active="yes"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="no" active="no"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
@@ -1938,6 +1938,8 @@ type 0204, grid 7.5 mm</description>
 <wire x1="2.5" y1="-0.9" x2="-1.4" y2="-0.9" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-0.9" x2="-1.4" y2="-1.4" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-1.4" x2="2.5" y2="-1.4" width="0.127" layer="21"/>
+<text x="2.54" y="2.159" size="1.27" layer="27">&gt;VALUE</text>
+<text x="2.54" y="3.683" size="1.27" layer="25">&gt;NAME</text>
 </package>
 <package name="3MM_REAR">
 <hole x="0" y="0" drill="3.1"/>
@@ -1953,6 +1955,8 @@ type 0204, grid 7.5 mm</description>
 <wire x1="0" y1="0.889" x2="0" y2="1.397" width="0.127" layer="21"/>
 <smd name="K" x="4.572" y="1.27" dx="4" dy="1.4" layer="1"/>
 <smd name="A" x="4.572" y="-1.27" dx="4" dy="1.4" layer="1"/>
+<text x="-0.889" y="2.413" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.889" y="3.937" size="1.27" layer="25">&gt;NAME</text>
 </package>
 </packages>
 </library>
@@ -2046,9 +2050,6 @@ design rules under a new name.</description>
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
 <param name="checkValues" value="0"/>
-<param name="checkNames" value="1"/>
-<param name="checkWireStubs" value="1"/>
-<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -2149,29 +2150,46 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="G1" library="battery" package="CR2032H_SMD" value="CR2032H_SMD" x="20.0025" y="18.415" smashed="yes" rot="MR270"/>
-<element name="SW1" library="special" library_urn="urn:adsk.eagle:library:367" package="EDG-02" package3d_urn="urn:adsk.eagle:package:26654/2" value="" x="20.0025" y="22.86" smashed="yes" rot="R90">
-<attribute name="VALUE" x="26.6065" y="19.558" size="1.27" layer="27" ratio="10" rot="R90"/>
+<element name="G1" library="battery" package="CR2032H_SMD" value="CR2032H_SMD" x="20.0025" y="18.415" smashed="yes" rot="MR270">
+<attribute name="NAME" x="26.67" y="24.4475" size="1.27" layer="26" ratio="10" rot="MR270"/>
+<attribute name="VALUE" x="24.7875" y="24.3825" size="1.27" layer="28" ratio="10" rot="MR270"/>
 </element>
+<element name="SW1" library="special" library_urn="urn:adsk.eagle:library:367" package="EDG-02" package3d_urn="urn:adsk.eagle:package:26654/2" value="" x="20.0025" y="22.86" rot="R90"/>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="2k7" x="10.00125" y="46.6725" smashed="yes" rot="R270">
+<attribute name="NAME" x="10.66165" y="43.18" size="0.9906" layer="25" ratio="10" rot="R270"/>
 <attribute name="SPICEPREFIX" value="R" x="10.00125" y="46.6725" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="9.51865" y="48.2981" size="0.9906" layer="27" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="8.56615" y="43.5356" size="0.9906" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="2k7" x="30.00375" y="46.83125" smashed="yes" rot="R270">
+<attribute name="NAME" x="30.66415" y="43.02125" size="0.9906" layer="25" ratio="10" rot="R270"/>
 <attribute name="SPICEPREFIX" value="R" x="30.00375" y="46.83125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="29.52115" y="48.45685" size="0.9906" layer="27" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="28.25115" y="43.37685" size="0.9906" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="LED3" library="HA_LED_6" package="3MM_H" value="" x="37.426059375" y="22.170396875" smashed="yes" rot="R311"/>
-<element name="LED4" library="HA_LED_6" package="3MM_H" value="" x="1.734246875" y="21.825190625" smashed="yes" rot="R231"/>
-<element name="LED1" library="HA_LED_6" package="3MM_REAR" value="" x="22.86" y="48.41875" smashed="yes" rot="MR270"/>
-<element name="LED2" library="HA_LED_6" package="3MM_REAR" value="" x="14.9225" y="48.26" smashed="yes" rot="MR270"/>
+<element name="LED3" library="HA_LED_6" package="3MM_H" value="" x="37.426059375" y="22.170396875" smashed="yes" rot="R311">
+<attribute name="NAME" x="39.64954375" y="22.987196875" size="1.27" layer="25" rot="R311"/>
+<attribute name="VALUE" x="40.721865625" y="21.669865625" size="1.27" layer="27" rot="R311"/>
+</element>
+<element name="LED4" library="HA_LED_6" package="3MM_H" value="" x="1.734246875" y="21.825190625" smashed="yes" rot="R231">
+<attribute name="NAME" x="2.998" y="20.39095" size="1.27" layer="25" rot="R231"/>
+<attribute name="VALUE" x="1.813628125" y="18.492534375" size="1.27" layer="27" rot="R231"/>
+</element>
+<element name="LED1" library="HA_LED_6" package="3MM_REAR" value="" x="22.86" y="48.41875" smashed="yes" rot="MR270">
+<attribute name="NAME" x="20.5105" y="49.30775" size="1.27" layer="26" rot="MR270"/>
+<attribute name="VALUE" x="20.447" y="49.30775" size="1.27" layer="28" rot="MR270"/>
+</element>
+<element name="LED2" library="HA_LED_6" package="3MM_REAR" value="" x="14.9225" y="48.26" smashed="yes" rot="MR270">
+<attribute name="NAME" x="12.573" y="49.149" size="1.27" layer="26" rot="MR270"/>
+<attribute name="VALUE" x="12.5095" y="49.149" size="1.27" layer="28" rot="MR270"/>
+</element>
 <element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="2k7" x="5.714996875" y="27.665034375" smashed="yes" rot="R240">
+<attribute name="NAME" x="6.81565625" y="30.4729625" size="0.9906" layer="25" ratio="10" rot="R60"/>
 <attribute name="SPICEPREFIX" value="R" x="5.714996875" y="27.665034375" size="1.778" layer="27" rot="R240" display="off"/>
-<attribute name="VALUE" x="6.10985" y="29.31414375" size="0.9906" layer="27" ratio="10" rot="R240"/>
+<attribute name="VALUE" x="8.49515" y="29.42335625" size="0.9906" layer="27" ratio="10" rot="R60"/>
 </element>
 <element name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/1" value="2k7" x="33.361521875" y="27.8614125" smashed="yes" rot="R302">
+<attribute name="NAME" x="32.9259125" y="31.528090625" size="0.9906" layer="25" ratio="10" rot="R122"/>
 <attribute name="SPICEPREFIX" value="R" x="33.361521875" y="27.8614125" size="1.778" layer="27" rot="R302" display="off"/>
-<attribute name="VALUE" x="32.090815625" y="28.984259375" size="0.9906" layer="27" ratio="10" rot="R302"/>
+<attribute name="VALUE" x="31.091684375" y="30.070740625" size="0.9906" layer="27" ratio="10" rot="R122"/>
 </element>
 </elements>
 <signals>
@@ -2607,13 +2625,6 @@ design rules under a new name.</description>
 <wire x1="38.4" y1="17.3" x2="38.8" y2="16.9" width="0.6096" layer="1"/>
 </signal>
 </signals>
-<mfgpreviewcolors>
-<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
-<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
-<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
-<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
-<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
-</mfgpreviewcolors>
 </board>
 </drawing>
 <compatibility>

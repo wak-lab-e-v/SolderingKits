@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4489,42 +4489,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </library>
 <library name="HA_LED_6">
 <packages>
-<package name="0603">
-<wire x1="-0.2032" y1="0.1778" x2="0.1016" y2="0" width="0.127" layer="21"/>
-<wire x1="0.1016" y1="0" x2="-0.2032" y2="-0.1778" width="0.127" layer="21"/>
-<wire x1="-0.2032" y1="0.1778" x2="-0.2032" y2="-0.1778" width="0.127" layer="21"/>
-<wire x1="-0.7112" y1="0.3302" x2="0.7112" y2="0.3302" width="0.127" layer="21"/>
-<wire x1="0.7112" y1="0.3302" x2="0.7112" y2="-0.3302" width="0.127" layer="21"/>
-<wire x1="0.7112" y1="-0.3302" x2="-0.7112" y2="-0.3302" width="0.127" layer="21"/>
-<wire x1="-0.7112" y1="-0.3302" x2="-0.7112" y2="0.3302" width="0.127" layer="21"/>
-<wire x1="0.127" y1="0.1778" x2="0.127" y2="-0.1778" width="0.127" layer="21"/>
-<wire x1="0.3556" y1="0.0254" x2="0.4064" y2="0.0254" width="0.127" layer="21"/>
-<wire x1="0.4064" y1="0.0254" x2="0.4064" y2="-0.0254" width="0.127" layer="21"/>
-<wire x1="0.4064" y1="-0.0254" x2="0.3556" y2="-0.0254" width="0.127" layer="21"/>
-<wire x1="0.3556" y1="-0.0254" x2="0.3556" y2="0.0254" width="0.127" layer="21"/>
-<smd name="K" x="0.6096" y="0" dx="0.4064" dy="0.8128" layer="1"/>
-<smd name="A" x="-0.6096" y="0" dx="0.4064" dy="0.8128" layer="1"/>
-<text x="-0.889" y="1.016" size="0.8128" layer="27">&gt;VALUE</text>
-<text x="-0.889" y="2.921" size="0.8128" layer="25">&gt;NAME</text>
-</package>
-<package name="0805">
-<wire x1="-0.3302" y1="0.3048" x2="0.1016" y2="0" width="0.127" layer="21"/>
-<wire x1="0.1016" y1="0" x2="-0.3302" y2="-0.3048" width="0.127" layer="21"/>
-<wire x1="-0.3302" y1="0.3048" x2="-0.3302" y2="-0.3048" width="0.127" layer="21"/>
-<wire x1="-0.9652" y1="0.4572" x2="0.9652" y2="0.4572" width="0.127" layer="21"/>
-<wire x1="0.9652" y1="0.4572" x2="0.9652" y2="-0.4572" width="0.127" layer="21"/>
-<wire x1="0.9652" y1="-0.4572" x2="-0.9652" y2="-0.4572" width="0.127" layer="21"/>
-<wire x1="-0.9652" y1="-0.4572" x2="-0.9652" y2="0.4572" width="0.127" layer="21"/>
-<wire x1="0.127" y1="0.3048" x2="0.127" y2="-0.3048" width="0.127" layer="21"/>
-<wire x1="0.4826" y1="0.0254" x2="0.5334" y2="0.0254" width="0.127" layer="21"/>
-<wire x1="0.5334" y1="0.0254" x2="0.5334" y2="-0.0254" width="0.127" layer="21"/>
-<wire x1="0.5334" y1="-0.0254" x2="0.4826" y2="-0.0254" width="0.127" layer="21"/>
-<wire x1="0.4826" y1="-0.0254" x2="0.4826" y2="0.0254" width="0.127" layer="21"/>
-<smd name="K" x="0.9398" y="0" dx="1.0922" dy="1.397" layer="1"/>
-<smd name="A" x="-0.9398" y="0" dx="1.0922" dy="1.397" layer="1"/>
-<text x="-0.889" y="1.651" size="0.8128" layer="27">&gt;VALUE</text>
-<text x="-0.889" y="2.921" size="0.8128" layer="25">&gt;NAME</text>
-</package>
 <package name="3MM_H">
 <pad name="A" x="0" y="-1.15" drill="0.8"/>
 <pad name="K" x="0" y="1.15" drill="0.8" shape="octagon"/>
@@ -4561,6 +4525,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="2.5" y1="-0.9" x2="-1.4" y2="-0.9" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-0.9" x2="-1.4" y2="-1.4" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-1.4" x2="2.5" y2="-1.4" width="0.127" layer="21"/>
+<text x="2.54" y="2.159" size="1.27" layer="27">&gt;VALUE</text>
+<text x="2.54" y="3.683" size="1.27" layer="25">&gt;NAME</text>
 </package>
 <package name="3MM_REAR">
 <hole x="0" y="0" drill="3.1"/>
@@ -4576,6 +4542,44 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="0" y1="0.889" x2="0" y2="1.397" width="0.127" layer="21"/>
 <smd name="K" x="4.572" y="1.27" dx="4" dy="1.4" layer="1"/>
 <smd name="A" x="4.572" y="-1.27" dx="4" dy="1.4" layer="1"/>
+<text x="-0.889" y="2.413" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.889" y="3.937" size="1.27" layer="25">&gt;NAME</text>
+</package>
+<package name="0603">
+<wire x1="-0.2032" y1="0.1778" x2="0.1016" y2="0" width="0.127" layer="21"/>
+<wire x1="0.1016" y1="0" x2="-0.2032" y2="-0.1778" width="0.127" layer="21"/>
+<wire x1="-0.2032" y1="0.1778" x2="-0.2032" y2="-0.1778" width="0.127" layer="21"/>
+<wire x1="-0.7112" y1="0.3302" x2="0.7112" y2="0.3302" width="0.127" layer="21"/>
+<wire x1="0.7112" y1="0.3302" x2="0.7112" y2="-0.3302" width="0.127" layer="21"/>
+<wire x1="0.7112" y1="-0.3302" x2="-0.7112" y2="-0.3302" width="0.127" layer="21"/>
+<wire x1="-0.7112" y1="-0.3302" x2="-0.7112" y2="0.3302" width="0.127" layer="21"/>
+<wire x1="0.127" y1="0.1778" x2="0.127" y2="-0.1778" width="0.127" layer="21"/>
+<wire x1="0.3556" y1="0.0254" x2="0.4064" y2="0.0254" width="0.127" layer="21"/>
+<wire x1="0.4064" y1="0.0254" x2="0.4064" y2="-0.0254" width="0.127" layer="21"/>
+<wire x1="0.4064" y1="-0.0254" x2="0.3556" y2="-0.0254" width="0.127" layer="21"/>
+<wire x1="0.3556" y1="-0.0254" x2="0.3556" y2="0.0254" width="0.127" layer="21"/>
+<smd name="K" x="0.6096" y="0" dx="0.4064" dy="0.8128" layer="1"/>
+<smd name="A" x="-0.6096" y="0" dx="0.4064" dy="0.8128" layer="1"/>
+<text x="-0.889" y="1.016" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-0.889" y="2.032" size="0.8128" layer="25">&gt;NAME</text>
+</package>
+<package name="0805">
+<wire x1="-0.3302" y1="0.3048" x2="0.1016" y2="0" width="0.127" layer="21"/>
+<wire x1="0.1016" y1="0" x2="-0.3302" y2="-0.3048" width="0.127" layer="21"/>
+<wire x1="-0.3302" y1="0.3048" x2="-0.3302" y2="-0.3048" width="0.127" layer="21"/>
+<wire x1="-0.9652" y1="0.4572" x2="0.9652" y2="0.4572" width="0.127" layer="21"/>
+<wire x1="0.9652" y1="0.4572" x2="0.9652" y2="-0.4572" width="0.127" layer="21"/>
+<wire x1="0.9652" y1="-0.4572" x2="-0.9652" y2="-0.4572" width="0.127" layer="21"/>
+<wire x1="-0.9652" y1="-0.4572" x2="-0.9652" y2="0.4572" width="0.127" layer="21"/>
+<wire x1="0.127" y1="0.3048" x2="0.127" y2="-0.3048" width="0.127" layer="21"/>
+<wire x1="0.4826" y1="0.0254" x2="0.5334" y2="0.0254" width="0.127" layer="21"/>
+<wire x1="0.5334" y1="0.0254" x2="0.5334" y2="-0.0254" width="0.127" layer="21"/>
+<wire x1="0.5334" y1="-0.0254" x2="0.4826" y2="-0.0254" width="0.127" layer="21"/>
+<wire x1="0.4826" y1="-0.0254" x2="0.4826" y2="0.0254" width="0.127" layer="21"/>
+<smd name="K" x="0.9398" y="0" dx="1.0922" dy="1.397" layer="1"/>
+<smd name="A" x="-0.9398" y="0" dx="1.0922" dy="1.397" layer="1"/>
+<text x="-1.524" y="1.27" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-1.524" y="2.286" size="0.8128" layer="25">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
