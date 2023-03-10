@@ -2,7 +2,7 @@
 <img src="pictures/wak-lab-LOGO.png" heigth="20" align = "right"> 
 EN: Small soldering exercise for the simple circuit with 4 LEDs, 2 switches 4 resistors and a button cell CR2032
 
-DE: Kleine Lötübung für den einfachen Stromkreis mit  4 LEDs , 2 Schalter 4 Widerstände und eine Knopfzelle CR2032
+DE: Kleine Lötübung für den einfachen Stromkreis mit  4 LEDs , 2 Schalter 4 Widerständen und eine Knopfzelle CR2032
 
 <img src="pictures/RoboAus.jpg" width="200"><img src="pictures/RoboEin.jpg" width="200">
 
@@ -30,3 +30,5 @@ licensed CC BY-ND
 <img src="pictures/Bat4.jpg" height="200"> <img src="pictures/Bat5.jpg" height="200">
 
 <img src="pictures/Ready.jpg" height="250">
+
+<img src="pictures/Schematic.png" height="250">
