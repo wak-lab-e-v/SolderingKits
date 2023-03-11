@@ -9,13 +9,9 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{capt-of}
-\usepackage{lastpage}
 \usepackage[ngerman]{babel}
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
-\usepackage{multirow}
-\usepackage{listings}            
-\usepackage{makeidx}
 
 \usepackage{xcolor,soul}
 \usepackage{colortbl} % Farbige Tabellen
@@ -43,6 +39,8 @@
 \begin{center}
 \includegraphics[height=8cm]{../pictures/RoboAus.jpg}
 \ \\
+\ \\
+\ \\
 Design: Martin Hildebrandt\\
 licensed CC BY\\
 \ \\
@@ -52,14 +50,15 @@ licensed CC BY-ND\\
 \newpage
 \section{Einleitung}
 Der Bausatz ist als kleine Lötübung für einen einfachen Stromkreis mit  4 LEDs, 2 Schalter 4 Widerständen und eine Knopfzelle CR2032.\\
+Im Schaltplan sieht man dass die Spannung am Pluspol der Batterie (3V) erst durch die Schalter muss, dann verzweigen wir auf je einen Widerstand. Die Leds benötigen etwa 2V, das ist von Farbe zu Farbe unterschiedlich.\\ Es bleibt 1V für die Widerstände übrig. Das Ohmsche Gesetzt $R = \frac{U}{I}$ bzw. umgestellt auf $I = \frac{U}{R}$ lässt uns ausrechnen, dass ein Strom von $I = \frac{1V}{2,7 k\Omega} = 0,37 mA$ pro LED fließt. Das ist wenig und ihr werdet lange Freude an eurem Roboter haben.\\
+ Übrigens alle Leitungen die an das Symbol GND gehen sind untereinander verbunden, damit der Strom weiter zum Minus Pol der Batterie fließen kann.
 \ \\
 \begin{minipage}[t]{\textwidth}
   \centering
-  \includegraphics[width=0.5\textwidth]{../pictures/Schematic}
+  \includegraphics[width=0.55\textwidth]{../pictures/Schematic}
   \captionof{figure}{Schaltplan}
   \label{img:Schematic}
 \end{minipage}
-\ \\
 
 \subsection{Kurz etwas zum Löten}
 Beim Löten stellen wir eine feste Verbindung aus Metall her. Dazu wird der Lötkolben auf ca. 350$^{\circ}$C eingestellt. Die Bauteile werden beim Löten sehr hei\ss \ und können nicht mit dem Finger gehalten werden (Verbrennungsgefahr). Die Lötspitze darf auch nie den Tisch berühren, dass hinterlässt hässliche Brandflecken. Der Lötkolben ist immer sicher zu lagern und das Anschlusskabel und die Steckdose sicher verlegt sein (Stolpergefahr).\\
@@ -83,6 +82,20 @@ Zum Löten benötigen Wir:
   \label{img:Bauteile}
 \end{minipage}
 \ \\
+Bauteile:
+\begin{itemize}
+\item Die Roboter Leiterplatte
+\item Ein zweifach Dipschalter
+\item Ein SMD Batteriehalter CR2032
+\item Eine Litium Batterie CR2032
+\item 4 Widerstände 2,7 k$\Omega$ 
+\item 4 Farbige LEDs
+\end{itemize}
+\subsection{Schritt 1 - Widerstände}
+Einfädeln der Widerstände von vorne, an den Armen und an den Ohren. An der Rückseite etwas abknicken, damit sie nicht wieder herausrutschen.\\
+Dann mit dem Lötkolben die Stelle erwärmen und das Lötzinn dazugeben. Beim ersten Mal schlage ich vor, dass ein erfahrener Löter den Lötkolben nimmt und ihr das Zinn. Danach tauscht ihr. Wenn das gut klappt, könnt ihr mit beiden Händen Zinn und Lötkolben gleichzeitig führen. \\
+Am Schluss mit dem Seitenschneider die überstehenden Enden abschneiden.\\
+\ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Resistor1.jpg}
@@ -101,7 +114,9 @@ Zum Löten benötigen Wir:
   \captionof{figure}{Widerstände}
   \label{img:Resistor3}
 \end{minipage}
-\ \\
+\subsection{Schritt 2 - Schalter}
+Den Schalter stecken wir am Bauch durch die Lötaugen. Auf dem Schalter steht -> ON das heißt, dass er nach rechts eingeschaltet wird. möchte man das anders herum darf man ihn auch umdrehen.\\
+Auf der Rückseite Knichen wir die Anschlüsse ganz flach nach unten bevor wir sie verlöten. Das ist wichtig damit der Batteriehalter nachher noch darüber Platz hat. Dann verlöten wir ihn so flach wie möglich.\\ \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Switch1.jpg}
@@ -120,6 +135,9 @@ Zum Löten benötigen Wir:
   \captionof{figure}{Schalter}
   \label{img:Switch3}
 \end{minipage}
+\subsection{Schritt 3 - Batteriehalter}
+Für den Batteriehalter machen wir vorher schon einen kleinen Klecks aus Lötzinn. Dann lässt sich danach der Halter schöner anlöten, weil man den Battierhalter etwas festhalten muss und man keine Hand mehr frei hat für das Zinn. Achtet Darauf, dass der halter richtig herum ist. Viellicht macht ihr das auch zu zweit, aber ohne euch zu verletzen.\\
+Wenn die zweite Seite angelötet ist, kann man die erste noch etwas nachlöten.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
@@ -139,6 +157,9 @@ Zum Löten benötigen Wir:
   \captionof{figure}{Batteriehalter}
   \label{img:Bat3}
 \end{minipage}
+\subsection{Schritt 4 - Hände}
+Die LEDs müssen richtig herum angelötet werden, sonst funktionieren sie nicht. Das Lange Beinchen nach rechts, da wo die kleine Markierung am Lötauge ist.\\
+Wir stecken die LEDs nicht ganz durch, damit wir sie noch in die Handflächen des Roboters knicken können.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
@@ -158,6 +179,8 @@ Zum Löten benötigen Wir:
   \captionof{figure}{LED}
   \label{img:LED3}
 \end{minipage}
+\subsection{Schritt 5 - Augen}
+Wir schneiden die die Beine der LEDs etwas kürzer dabei schneiden wir Schräg, damit wir noch wissen welches das längere war.\\ Wir machen wieder etwas Zinn auf das rechte Pad. Dann knichen wir erst das kurze Beinchen herunter und während wir es festlöten können wir die LED am langen Beinchen mit einem Finger etwas festhalten. Danach knicken wir auch das lange Beinchen herunter und löten es fest.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
@@ -190,17 +213,19 @@ Zum Löten benötigen Wir:
   \captionof{figure}{LED}
   \label{img:LED8}
 \end{minipage}
+\subsection{Schritt 6 - Batterie einsetzen}
+Die Batterie zuerst oben unter die Metallklammer und dann durch schieben nach unten drücken bis die einrastet.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/Bat4.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Batterie}
   \label{img:Bat4}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/Bat5.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Batterie}
   \label{img:Bat5}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
