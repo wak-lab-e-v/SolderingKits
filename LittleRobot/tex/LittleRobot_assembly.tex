@@ -13,6 +13,7 @@
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
 
+
 \usepackage{xcolor,soul}
 \usepackage{colortbl} % Farbige Tabellen
 
@@ -32,6 +33,10 @@
 \cfoot{\pagemark}
 \ofoot{\today}
 
+\addto\captionsngerman{
+\renewcommand{\figurename}{Abb.}
+\renewcommand{\tablename}{Tab.}
+}
 
 \begin{document}
 \maketitle
@@ -49,9 +54,9 @@ licensed CC BY-ND\\
 \end{center}
 \newpage
 \section{Einleitung}
-Der Bausatz ist als kleine Lötübung für einen einfachen Stromkreis mit  4 LEDs, 2 Schalter 4 Widerständen und eine Knopfzelle CR2032.\\
-Im Schaltplan sieht man dass die Spannung am Pluspol der Batterie (3V) erst durch die Schalter muss, dann verzweigen wir auf je einen Widerstand. Die Leds benötigen etwa 2V, das ist von Farbe zu Farbe unterschiedlich.\\ Es bleibt 1V für die Widerstände übrig. Das Ohmsche Gesetzt $R = \frac{U}{I}$ bzw. umgestellt auf $I = \frac{U}{R}$ lässt uns ausrechnen, dass ein Strom von $I = \frac{1V}{2,7 k\Omega} = 0,37 mA$ pro LED fließt. Das ist wenig und ihr werdet lange Freude an eurem Roboter haben.\\
- Übrigens alle Leitungen die an das Symbol GND gehen sind untereinander verbunden, damit der Strom weiter zum Minus Pol der Batterie fließen kann.
+Der Bausatz ist gedacht als kleine Lötübung für einen einfachen Stromkreis mit  4 LEDs, 2 Schaltern, 4 Widerständen und einer Knopfzelle CR2032.\\
+Im Schaltplan sieht man, dass die Spannung am Pluspol der Batterie (3V) erst durch die Schalter muss, dann verzweigen wir auf je einen Widerstand. Die LEDs benötigen etwa 2V, das ist von Farbe zu Farbe unterschiedlich.\\ Es bleibt 1V für die Widerstände übrig. Das Ohmsche Gesetzt $R = \frac{U}{I}$ bzw. umgestellt auf $I = \frac{U}{R}$ lässt uns ausrechnen, dass ein Strom von $I = \frac{1V}{2,7 k\Omega} = 0,37 mA$ pro LED fließt. Das ist wenig, daher werdet ihr lange Freude an eurem Roboter haben.\\
+Übrigens: Alle Leitungen die an das Symbol GND gehen, sind untereinander verbunden, damit der Strom weiter zum Minus-Pol der Batterie fließen kann.\\
 \ \\
 \begin{minipage}[t]{\textwidth}
   \centering
@@ -61,12 +66,12 @@ Im Schaltplan sieht man dass die Spannung am Pluspol der Batterie (3V) erst durc
 \end{minipage}
 
 \subsection{Kurz etwas zum Löten}
-Beim Löten stellen wir eine feste Verbindung aus Metall her. Dazu wird der Lötkolben auf ca. 350$^{\circ}$C eingestellt. Die Bauteile werden beim Löten sehr hei\ss \ und können nicht mit dem Finger gehalten werden (Verbrennungsgefahr). Die Lötspitze darf auch nie den Tisch berühren, dass hinterlässt hässliche Brandflecken. Der Lötkolben ist immer sicher zu lagern und das Anschlusskabel und die Steckdose sicher verlegt sein (Stolpergefahr).\\
-Zunächst wird das Bauteil eingefädelt. Das Beinchen vom Bauteil kann etwas nach au\ss en gebogen werden, damit es fixiert ist. Dann mit dem Lötkolben Pad und Beinchen aufheizen und dann etwas Zinn von der gegenüber liegen den Seite heranführen und aufschmelzen. Nach etwas 1-2 Sekunden sollte genug Zinn an der Verbindung sein. Die Zeit kann stark variieren je nach dem wie viel Wärme von Bauteil oder Pad aufgenommen wird.\\
+Beim Löten stellen wir eine feste Verbindung aus Metall her. Dazu wird der Lötkolben auf ca. 350$^{\circ}$C eingestellt. Die Bauteile werden beim Löten sehr hei\ss \ und können nicht mit dem Finger gehalten werden (Verbrennungsgefahr). Die Lötspitze darf auch nie den Tisch berühren. Dies hinterlässt hässliche Brandflecken. Der Lötkolben ist immer sicher zu lagern und das Anschlusskabel und die Steckdose sollen sicher verlegt sein (Stolpergefahr).\\
+Zunächst wird das Bauteil eingefädelt. Das Beinchen vom Bauteil kann etwas nach au\ss en gebogen werden, damit es fixiert ist. Dann mit dem Lötkolben Pad und Beinchen aufheizen und dann etwas Zinn von der gegenüber liegenden den Seite heranführen und aufschmelzen. Nach etwas 1-2 Sekunden sollte genug Zinn an der Verbindung sein. Die Zeit kann stark variieren, je nach dem, wieviel Wärme von Bauteil oder Pad aufgenommen wird.\\
 \ \\
 Zum Löten benötigen Wir:
 \begin{itemize}
-  \item     Den Bausatz
+  \item     den Bausatz
   \item     einen Lötkolben
   \item     etwas Lötzinn
   \item     einen Seitenschneider
@@ -84,12 +89,12 @@ Zum Löten benötigen Wir:
 \ \\
 Bauteile:
 \begin{itemize}
-\item Die Roboter Leiterplatte
-\item Ein zweifach Dipschalter
-\item Ein SMD Batteriehalter CR2032
-\item Eine Litium Batterie CR2032
+\item die Roboter Leiterplatte
+\item einen zweifach Dipschalter
+\item einen SMD Batteriehalter CR2032
+\item eine Lithium Batterie CR2032
 \item 4 Widerstände 2,7 k$\Omega$ 
-\item 4 Farbige LEDs
+\item 4 farbige LEDs
 \end{itemize}
 \subsection{Schritt 1 - Widerstände}
 Einfädeln der Widerstände von vorne, an den Armen und an den Ohren. An der Rückseite etwas abknicken, damit sie nicht wieder herausrutschen.\\
@@ -99,139 +104,139 @@ Am Schluss mit dem Seitenschneider die überstehenden Enden abschneiden.\\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Resistor1.jpg}
-  \captionof{figure}{Widerstände}
+  \captionof{figure}{Widerstände einfädeln}
   \label{img:Resistor1}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Resistor2.jpg}
-  \captionof{figure}{Widerstände}
+  \captionof{figure}{Widerstände verlöten}
   \label{img:Resistor2}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Resistor3.jpg}
-  \captionof{figure}{Widerstände}
+  \captionof{figure}{Beinchen abschneiden}
   \label{img:Resistor3}
 \end{minipage}
 \subsection{Schritt 2 - Schalter}
-Den Schalter stecken wir am Bauch durch die Lötaugen. Auf dem Schalter steht -> ON das heißt, dass er nach rechts eingeschaltet wird. möchte man das anders herum darf man ihn auch umdrehen.\\
-Auf der Rückseite Knichen wir die Anschlüsse ganz flach nach unten bevor wir sie verlöten. Das ist wichtig damit der Batteriehalter nachher noch darüber Platz hat. Dann verlöten wir ihn so flach wie möglich.\\ \ \\
+Den Schalter stecken wir am Bauch durch die Lötaugen. Auf dem Schalter steht -> ON. Das heißt, dass er nach rechts eingeschaltet wird. Möchte man das anders herum, darf man ihn auch umdrehen.\\
+Auf der Rückseite knicken wir die Anschlüsse ganz flach nach unten, bevor wir sie verlöten. Das ist wichtig, damit der Batteriehalter nachher noch darüber Platz hat. Dann verlöten wir ihn so flach wie möglich.\\ \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Switch1.jpg}
-  \captionof{figure}{Schalter}
-  \label{img:Resistor1}
+  \captionof{figure}{Schalter einsetzen}
+  \label{img:Switch1}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Switch2.jpg}
-  \captionof{figure}{Schalter}
+  \captionof{figure}{Pins umknicken}
   \label{img:Switch2}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Switch3.jpg}
-  \captionof{figure}{Schalter}
+  \captionof{figure}{Pins verlöten}
   \label{img:Switch3}
 \end{minipage}
 \subsection{Schritt 3 - Batteriehalter}
-Für den Batteriehalter machen wir vorher schon einen kleinen Klecks aus Lötzinn. Dann lässt sich danach der Halter schöner anlöten, weil man den Battierhalter etwas festhalten muss und man keine Hand mehr frei hat für das Zinn. Achtet Darauf, dass der halter richtig herum ist. Viellicht macht ihr das auch zu zweit, aber ohne euch zu verletzen.\\
+Für den Batteriehalter machen wir vorher schon einen kleinen Klecks aus Lötzinn. Dann lässt sich danach der Halter schöner anlöten, da man den Battierhalter etwas festhalten muss und man keine Hand mehr frei hat für das Zinn. Achtet darauf, dass der Halter richtig herum ist. Vielleicht macht ihr das auch zu zweit und ohne euch zu verletzen.\\
 Wenn die zweite Seite angelötet ist, kann man die erste noch etwas nachlöten.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Bat1.jpg}
-  \captionof{figure}{Batteriehalter}
+  \captionof{figure}{Pad verzinnen}
   \label{img:Bat1}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Bat2.jpg}
-  \captionof{figure}{Batteriehalter}
+  \captionof{figure}{Anschluss anlöten}
   \label{img:Bat2}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=4cm]{../pictures/Bat3.jpg}
-  \captionof{figure}{Batteriehalter}
+  \captionof{figure}{Anschluss anlöten}
   \label{img:Bat3}
 \end{minipage}
 \subsection{Schritt 4 - Hände}
-Die LEDs müssen richtig herum angelötet werden, sonst funktionieren sie nicht. Das Lange Beinchen nach rechts, da wo die kleine Markierung am Lötauge ist.\\
+Die LEDs müssen richtig herum angelötet werden, sonst funktionieren sie nicht: Das lange Beinchen bitte nach rechts, dorthin wo die kleine Markierung am Lötauge ist.\\
 Wir stecken die LEDs nicht ganz durch, damit wir sie noch in die Handflächen des Roboters knicken können.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED1.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Richtig einfädeln}
   \label{img:LED1}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED2.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{LED Abknicken}
   \label{img:LED2}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED3.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Verlöten und abschneiden}
   \label{img:LED3}
 \end{minipage}
 \subsection{Schritt 5 - Augen}
-Wir schneiden die die Beine der LEDs etwas kürzer dabei schneiden wir Schräg, damit wir noch wissen welches das längere war.\\ Wir machen wieder etwas Zinn auf das rechte Pad. Dann knichen wir erst das kurze Beinchen herunter und während wir es festlöten können wir die LED am langen Beinchen mit einem Finger etwas festhalten. Danach knicken wir auch das lange Beinchen herunter und löten es fest.\\
+Wir schneiden die die Beine der LEDs etwas kürzer. Dabei schneiden wir schräg, damit wir noch wissen welches Beinchen das längere war.\\ Wir machen wieder etwas Zinn auf das rechte Pad. Dann knicken wir erst das kurze Beinchen herunter und während wir es festlöten, können wir die LED am langen Beinchen mit einem Finger etwas festhalten. Danach knicken wir auch das lange Beinchen herunter und löten es fest.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED4.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Schräg abschneiden}
   \label{img:LED4}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED5.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Lang bleibt lang}
   \label{img:LED5}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED6.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Pad vorverzinnen}
   \label{img:LED6}
 \end{minipage}
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED7.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Rechts verlöten}
   \label{img:LED7}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/LED8.jpg}
-  \captionof{figure}{LED}
+  \captionof{figure}{Links verlöten}
   \label{img:LED8}
 \end{minipage}
 \subsection{Schritt 6 - Batterie einsetzen}
-Die Batterie zuerst oben unter die Metallklammer und dann durch schieben nach unten drücken bis die einrastet.\\
+Die Batterie zuerst oben unter die Metallklammer, danach durchschieben und nach unten drücken, bis sie einrastet.\\
 \ \\
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/Bat4.jpg}
-  \captionof{figure}{Batterie}
+  \captionof{figure}{Batterie unter die Klammer}
   \label{img:Bat4}
   \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/Bat5.jpg}
-  \captionof{figure}{Batterie}
+  \captionof{figure}{Batterie einklippsen}
   \label{img:Bat5}
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
   \centering
   \includegraphics[height=3.5cm]{../pictures/Ready.jpg}
-  \captionof{figure}{Ferig}
+  \captionof{figure}{Schalter nach rechts}
   \label{img:Ready}
 \end{minipage}
 
