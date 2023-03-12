@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{capt-of}
+\usepackage{multirow} 
 \usepackage[ngerman]{babel}
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
@@ -38,6 +39,20 @@
 \renewcommand{\tablename}{Tab.}
 }
 
+\newcommand\Vorsicht[1]{%
+%\setlength\arrayrulewidth{1,50pt}
+\ \\
+\begin{tabular}{p{0.16\textwidth} p{0.79\textwidth}|}
+\cline{2-2}
+& \\
+ \multirow{5}{*}{\raisebox{0mm}[0mm][0mm]{\includegraphics[width=0.1\textwidth]{../pictures/Vorsicht.png}}} & \textbf{VORSICHT!}{\begin{flushleft}#1\end{flushleft}} \\
+\cline{2-2}
+\end{tabular}
+\ \\
+%\setlength\arrayrulewidth{0,75pt}
+}
+
+
 \begin{document}
 \maketitle
 %\tableofcontents
@@ -64,10 +79,15 @@ Im Schaltplan sieht man, dass die Spannung am Pluspol der Batterie (3V) erst dur
   \captionof{figure}{Schaltplan}
   \label{img:Schematic}
 \end{minipage}
-
+\newpage
 \subsection{Kurz etwas zum Löten}
-Beim Löten stellen wir eine feste Verbindung aus Metall her. Dazu wird der Lötkolben auf ca. 350$^{\circ}$C eingestellt. Die Bauteile werden beim Löten sehr hei\ss \ und können nicht mit dem Finger gehalten werden (Verbrennungsgefahr). Die Lötspitze darf auch nie den Tisch berühren. Dies hinterlässt hässliche Brandflecken. Der Lötkolben ist immer sicher zu lagern und das Anschlusskabel und die Steckdose sollen sicher verlegt sein (Stolpergefahr).\\
+Beim Löten stellen wir eine feste Verbindung aus Metall her. Dazu verwenden wir ein Lötzinn aus 99\% Zinn, 0,3\% Silber und 0,7 \% Kupfer. Außerdem beinhaltet das Lötzinn im Kern ein Flußmittel (Kolophonium), welches die Oberflächen reinigt, damit sich die Metalle besser verbinden können.\\
+\ \\
+Dazu wird der Lötkolben auf ca. 350$^{\circ}$C eingestellt. Die Bauteile werden beim Löten sehr hei\ss \ und können nicht mit dem Finger gehalten werden (Verbrennungsgefahr). Die Lötspitze darf auch \textbf{nie} den Tisch berühren. Dies hinterlässt hässliche Brandflecken. Der Lötkolben ist immer sicher zu lagern und das Anschlusskabel und die Steckdose sollen sicher verlegt sein (Stolpergefahr).\\
 Zunächst wird das Bauteil eingefädelt. Das Beinchen vom Bauteil kann etwas nach au\ss en gebogen werden, damit es fixiert ist. Dann mit dem Lötkolben Pad und Beinchen aufheizen und dann etwas Zinn von der gegenüber liegenden den Seite heranführen und aufschmelzen. Nach etwas 1-2 Sekunden sollte genug Zinn an der Verbindung sein. Die Zeit kann stark variieren, je nach dem, wieviel Wärme von Bauteil oder Pad aufgenommen wird.\\
+\Vorsicht{\begin{itemize} \item der Lötkolben ist sehr \textbf{heiß}, niemals mit den Fingern berühren
+\item die Lötdämpfe \textbf{nicht} einatmen \item nach der Arbeit bitte die Hände mit Seife waschen.\item beim Abschneiden der Beinchen bitte darauf achten, dass Sie nicht durch die Luft fliegen.\end{itemize}}\\
+\ \\
 \ \\
 Zum Löten benötigen Wir:
 \begin{itemize}
@@ -78,6 +98,42 @@ Zum Löten benötigen Wir:
   \item     eine feuerfeste Unterlage
   \item     optional eine Flachzange
 \end{itemize}
+\ \\
+%\begin{minipage}[t]{1.0\textwidth}
+%\captionof{table}{Hier die Tabelle}
+%\begin{tabular}{|p{4,6cm}|p{4,6cm}|p{4,6cm}|}
+%\hline
+%\CItoprowcolor \textbf{Legierung (ISO 3677)} & \textbf{Schmelztemperatur} & \textbf{Verwendung}\\
+%\hline
+%Sn635Pb37 & 183 $^{\circ}$C & Seit 2006 nur noch bedingt einsetzbar\\
+%\cline{1-2}
+%Sn96,5Ag2,8Cu0,5 & 217 - 219$^{\circ}$C & \\
+%\cline{1-2}
+%Sn95,8Ag3,5Cu0,7 & 217 - 219$^{\circ}$C & \\
+%\cline{1-2}
+%Sn95.5Ag3.8Cu0.7 & 217 $^{\circ}$C & \\
+%\cline{1-2}
+%Sn99Ag0,3Cu0,7 & 217 - 227$^{\circ}$C & \\
+%\cline{1-2}
+%Sn96,5Ag3,5 & 221 $^{\circ}$C & \\
+%\hline
+%Sn96Ag4 &  & 221 $^{\circ}$C \\
+%\cline{1-2}
+%Sn96,2Ag3,8 & 221 - 238 $^{\circ}$C & \\
+%\cline{1-2}
+%Sn95Ag5,0 & 221 - 240 $^{\circ}$C & \\
+%\cline{1-2}
+%Sn90Ag10 & 221 - 275 $^{\circ}$C  & \\
+%\cline{1-2}
+%Sn99,3Cu0,7 & 228 $^{\circ}$C & \\
+%\hline
+%Sn97Cu3,0 & 230-250 $^{\circ}$C & -\\
+%\cline{1-2}
+%Sn99,3Cu0,6Ni0,05 & 228 - 229 $^{\circ}$C & \\
+%\hline
+%\end{tabular}
+%\label{tab:Hier die Tabelle}
+%\end{minipage}
 
 \section{Aufbau}
 \begin{minipage}[t]{\textwidth}
