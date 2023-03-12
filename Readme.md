@@ -13,3 +13,12 @@ licensed CC BY
 
 Logo: By Dorothea Wendt
 licensed CC BY-ND
+
+
+## LedEgg
+
+<img src="LedEgg/pictures/egg.png" width="200">
+Design: Martin Hildebrandt
+licensed CC BY
+
+[Detail](LedEgg/README.md) 
