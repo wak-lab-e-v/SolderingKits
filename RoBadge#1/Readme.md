@@ -7,16 +7,16 @@
 # Step by Step
 <img src="pictures/Partlist.jpg" height="250">
 
-<img src="pictures/Resistor1.jpg" height="200"><img src="pictures/Resistor2.jpg" height="200"><img src="pictures/LED1.jpg" height="200">
+<img src="pictures/Resistor1.jpg" height="200"> <img src="pictures/Resistor2.jpg" height="200"> <img src="pictures/LED1.jpg" height="200">
 
 <img src="pictures/Bestueckung.jpg" height="300">
 
-<img src="pictures/Loeten.jpg" height="200"><img src="pictures/Cut.jpg" height="200">
+<img src="pictures/Loeten.jpg" height="200"> <img src="pictures/Cut.jpg" height="200">
 
-<img src="pictures/Battery.jpg" height="200"><img src="pictures/Loeten2.jpg" height="200"><img src="pictures/Halter.jpg" height="200">
+<img src="pictures/Battery.jpg" height="200"> <img src="pictures/Loeten2.jpg" height="200"> <img src="pictures/Halter.jpg" height="200">
 
-<img src="pictures/Knopfzelle.jpg" height="200"><img src="pictures/Name.jpg" height="200"><img src="pictures/Switchon.jpg" height="200">
+<img src="pictures/Knopfzelle.jpg" height="200"> <img src="pictures/Name.jpg" height="200"> <img src="pictures/Switchon.jpg" height="200">
 
 
 
-<img src="pictures/schematic.png" height="250">
+<img src="pictures/schematic.png" height="350">
