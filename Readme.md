@@ -14,6 +14,10 @@ licensed CC BY
 Logo: By Dorothea Wendt
 licensed CC BY-ND
 
+## RoBadge#1
+<img src="RoBadge#1/pictures/Ready.jpg" width="200">
+
+[Detail](RoBadge#1/Readme.md) 
 
 ## LedEgg
 
