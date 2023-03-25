@@ -23,20 +23,20 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="10" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="10" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -49,13 +49,13 @@
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="7" fill="10" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="10" visible="yes" active="yes"/>
@@ -721,8 +721,10 @@
 <smd name="-" x="14.9225" y="0" dx="3.6" dy="2.6" layer="1" rot="R90"/>
 <wire x1="-11" y1="8" x2="-11" y2="3.8" width="0.127" layer="21"/>
 <wire x1="-11" y1="3.8" x2="-11" y2="-3.9" width="0.127" layer="21"/>
-<wire x1="-11" y1="-3.9" x2="-11" y2="-8" width="0.127" layer="21"/>
-<wire x1="-11" y1="-8" x2="-6" y2="-8" width="0.127" layer="21"/>
+<wire x1="-11" y1="-3.9" x2="-11" y2="-6.73" width="0.127" layer="21"/>
+<wire x1="-11" y1="-6.73" x2="-10.16" y2="-7.62" width="0.127" layer="21"/>
+<wire x1="-10.16" y1="-7.62" x2="-9.78" y2="-8" width="0.127" layer="21"/>
+<wire x1="-9.78" y1="-8" x2="-6" y2="-8" width="0.127" layer="21"/>
 <wire x1="-6" y1="-8" x2="11" y2="-8" width="0.127" layer="21"/>
 <wire x1="11" y1="-8" x2="11" y2="-3.8" width="0.127" layer="21"/>
 <wire x1="11" y1="-3.8" x2="11" y2="3.8" width="0.127" layer="21"/>
@@ -2623,6 +2625,196 @@ design rules under a new name.</description>
 <wire x1="38" y1="17.4" x2="38.1" y2="17.3" width="0.6096" layer="1"/>
 <wire x1="38.1" y1="17.3" x2="38.4" y2="17.3" width="0.6096" layer="1"/>
 <wire x1="38.4" y1="17.3" x2="38.8" y2="16.9" width="0.6096" layer="1"/>
+</signal>
+<signal name="S$6">
+<polygon width="0.001" layer="1">
+<vertex x="12.6325" y="28.66"/>
+<vertex x="13.0025" y="26.69"/>
+<vertex x="13.0325" y="26.66"/>
+<vertex x="13.0725" y="26.63"/>
+<vertex x="13.1125" y="26.61"/>
+<vertex x="13.1525" y="26.6"/>
+<vertex x="13.2525" y="26.62"/>
+<vertex x="13.9725" y="27.79"/>
+<vertex x="14.6825" y="26.67"/>
+<vertex x="14.7125" y="26.63"/>
+<vertex x="14.7825" y="26.6"/>
+<vertex x="14.8825" y="26.6"/>
+<vertex x="14.9125" y="26.63"/>
+<vertex x="14.9525" y="26.69"/>
+<vertex x="15.3425" y="28.66"/>
+<vertex x="14.9725" y="28.65"/>
+<vertex x="14.7225" y="27.34"/>
+<vertex x="14.1025" y="28.28"/>
+<vertex x="14.0625" y="28.31"/>
+<vertex x="13.9925" y="28.33"/>
+<vertex x="13.9125" y="28.31"/>
+<vertex x="13.8525" y="28.26"/>
+<vertex x="13.2725" y="27.32"/>
+<vertex x="12.9925" y="28.66"/>
+</polygon>
+</signal>
+<signal name="S$1">
+<polygon width="0.001" layer="1">
+<vertex x="15.9525" y="26.62"/>
+<vertex x="15.5825" y="26.63"/>
+<vertex x="15.5925" y="27.75"/>
+<vertex x="15.6325" y="27.93"/>
+<vertex x="15.7725" y="28.18"/>
+<vertex x="15.9025" y="28.37"/>
+<vertex x="16.1625" y="28.53"/>
+<vertex x="16.4125" y="28.64"/>
+<vertex x="16.7425" y="28.66"/>
+<vertex x="17.4025" y="28.66"/>
+<vertex x="17.5025" y="28.64"/>
+<vertex x="17.5625" y="28.61"/>
+<vertex x="17.5925" y="28.57"/>
+<vertex x="17.6125" y="28.52"/>
+<vertex x="17.6225" y="28.48"/>
+<vertex x="17.6125" y="27.59"/>
+<vertex x="17.2525" y="27.59"/>
+<vertex x="17.2525" y="28.28"/>
+<vertex x="17.2325" y="28.29"/>
+<vertex x="16.5525" y="28.28"/>
+<vertex x="16.3625" y="28.25"/>
+<vertex x="16.1725" y="28.14"/>
+<vertex x="16.0725" y="28.02"/>
+<vertex x="16.0125" y="27.92"/>
+<vertex x="15.9725" y="27.79"/>
+<vertex x="15.9525" y="27.69"/>
+<vertex x="15.9525" y="27.49"/>
+<vertex x="17.6125" y="27.49"/>
+<vertex x="17.6125" y="26.63"/>
+<vertex x="17.2425" y="26.63"/>
+<vertex x="17.2425" y="27.12"/>
+<vertex x="15.9425" y="27.12"/>
+</polygon>
+</signal>
+<signal name="S$4">
+<polygon width="0.001" layer="1">
+<vertex x="18.0525" y="28.66"/>
+<vertex x="18.4125" y="28.66"/>
+<vertex x="18.4125" y="26.63"/>
+<vertex x="18.0525" y="26.63"/>
+</polygon>
+</signal>
+<signal name="S$5">
+<polygon width="0.001" layer="1">
+<vertex x="18.5625" y="27.82"/>
+<vertex x="18.5625" y="27.46"/>
+<vertex x="18.8225" y="27.46"/>
+<vertex x="19.6325" y="26.63"/>
+<vertex x="20.1525" y="26.63"/>
+<vertex x="19.1325" y="27.64"/>
+<vertex x="20.1625" y="28.65"/>
+<vertex x="19.6525" y="28.65"/>
+<vertex x="18.8325" y="27.82"/>
+</polygon>
+</signal>
+<signal name="S$7">
+<polygon width="0.001" layer="1">
+<vertex x="20.2925" y="27.81"/>
+<vertex x="20.2825" y="27.48"/>
+<vertex x="21.6025" y="27.47"/>
+<vertex x="21.6025" y="27.8"/>
+</polygon>
+</signal>
+<signal name="S$8">
+<polygon width="0.001" layer="1">
+<vertex x="21.9925" y="28.66"/>
+<vertex x="22.3525" y="28.66"/>
+<vertex x="22.3525" y="26.99"/>
+<vertex x="23.8425" y="26.99"/>
+<vertex x="23.8425" y="26.63"/>
+<vertex x="22.1225" y="26.63"/>
+<vertex x="22.0625" y="26.66"/>
+<vertex x="22.0125" y="26.72"/>
+<vertex x="21.9925" y="26.79"/>
+</polygon>
+</signal>
+<signal name="S$9">
+<polygon width="0.001" layer="1">
+<vertex x="24.3525" y="28.15"/>
+<vertex x="25.2225" y="28.15"/>
+<vertex x="25.3225" y="28.14"/>
+<vertex x="25.3925" y="28.12"/>
+<vertex x="25.4325" y="28.1"/>
+<vertex x="25.5025" y="28.03"/>
+<vertex x="25.6325" y="27.89"/>
+<vertex x="25.6625" y="27.8"/>
+<vertex x="25.6625" y="27.04"/>
+<vertex x="25.6225" y="26.88"/>
+<vertex x="25.4925" y="26.73"/>
+<vertex x="25.4025" y="26.67"/>
+<vertex x="25.3125" y="26.63"/>
+<vertex x="24.4325" y="26.63"/>
+<vertex x="24.3225" y="26.65"/>
+<vertex x="24.2425" y="26.68"/>
+<vertex x="24.1925" y="26.72"/>
+<vertex x="24.0025" y="26.93"/>
+<vertex x="23.9925" y="26.99"/>
+<vertex x="23.9925" y="27.31"/>
+<vertex x="24.0525" y="27.4"/>
+<vertex x="24.1325" y="27.49"/>
+<vertex x="24.2225" y="27.57"/>
+<vertex x="24.3125" y="27.62"/>
+<vertex x="24.3925" y="27.64"/>
+<vertex x="25.1525" y="27.64"/>
+<vertex x="25.1525" y="27.29"/>
+<vertex x="24.4325" y="27.29"/>
+<vertex x="24.3825" y="27.26"/>
+<vertex x="24.3525" y="27.23"/>
+<vertex x="24.3325" y="27.18"/>
+<vertex x="24.3325" y="27.08"/>
+<vertex x="24.3725" y="27.01"/>
+<vertex x="24.4725" y="26.97"/>
+<vertex x="25.2125" y="26.97"/>
+<vertex x="25.2825" y="27.01"/>
+<vertex x="25.3125" y="27.05"/>
+<vertex x="25.3225" y="27.1"/>
+<vertex x="25.3225" y="27.71"/>
+<vertex x="25.2825" y="27.76"/>
+<vertex x="25.2425" y="27.79"/>
+<vertex x="25.1825" y="27.81"/>
+<vertex x="24.3525" y="27.81"/>
+</polygon>
+</signal>
+<signal name="N$37">
+<polygon width="0.001" layer="1">
+<vertex x="25.98" y="28.81"/>
+<vertex x="25.98" y="27.02"/>
+<vertex x="26.04" y="26.89"/>
+<vertex x="26.13" y="26.77"/>
+<vertex x="26.26" y="26.69"/>
+<vertex x="26.39" y="26.64"/>
+<vertex x="27.24" y="26.64"/>
+<vertex x="27.36" y="26.68"/>
+<vertex x="27.47" y="26.73"/>
+<vertex x="27.54" y="26.81"/>
+<vertex x="27.62" y="26.91"/>
+<vertex x="27.66" y="27.07"/>
+<vertex x="27.67" y="27.17"/>
+<vertex x="27.67" y="27.66"/>
+<vertex x="27.65" y="27.78"/>
+<vertex x="27.59" y="27.9"/>
+<vertex x="27.49" y="28.03"/>
+<vertex x="27.37" y="28.11"/>
+<vertex x="27.23" y="28.15"/>
+<vertex x="26.5" y="28.15"/>
+<vertex x="26.49" y="27.79"/>
+<vertex x="27.19" y="27.79"/>
+<vertex x="27.27" y="27.76"/>
+<vertex x="27.3" y="27.7"/>
+<vertex x="27.3" y="27.14"/>
+<vertex x="27.28" y="27.06"/>
+<vertex x="27.25" y="27.02"/>
+<vertex x="27.2" y="27"/>
+<vertex x="26.43" y="27"/>
+<vertex x="26.39" y="27.03"/>
+<vertex x="26.35" y="27.07"/>
+<vertex x="26.34" y="27.15"/>
+<vertex x="26.33" y="28.81"/>
+</polygon>
 </signal>
 </signals>
 </board>
