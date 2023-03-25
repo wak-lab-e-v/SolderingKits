@@ -22,24 +22,25 @@ module SimpleLedEgg(){
 			difference() // PCB and holes 
 			{
 				translate(board_origin)  polygon(points = board_polygons[0]); //Board
+				translate([20.479,53.340]) circle(r=0.500,$fn=$fn); //Hole
 				if (Detailgrad > 9) // Drill part holes 
 				{
-					translate([3.591,17.976])circle(r=0.406,$fn=$fn); //LED3MM A
-					translate([6.131,17.976])circle(r=0.406,$fn=$fn); //LED3MM K
+					translate([2.638,17.976])circle(r=0.406,$fn=$fn); //LED3MM A
+					translate([5.178,17.976])circle(r=0.406,$fn=$fn); //LED3MM K
 					translate([5.397,31.115])circle(r=0.406,$fn=$fn); //LED3MM A
 					translate([7.938,31.115])circle(r=0.406,$fn=$fn); //LED3MM K
 					translate([7.899,41.257])circle(r=0.406,$fn=$fn); //LED3MM A
 					translate([10.439,41.257])circle(r=0.406,$fn=$fn); //LED3MM K
-					translate([12.700,23.178])circle(r=0.406,$fn=$fn); //LED3MM A
-					translate([15.240,23.178])circle(r=0.406,$fn=$fn); //LED3MM K
+					translate([12.700,23.495])circle(r=0.406,$fn=$fn); //LED3MM A
+					translate([15.240,23.495])circle(r=0.406,$fn=$fn); //LED3MM K
 					translate([13.018,48.895])circle(r=0.406,$fn=$fn); //LED3MM A
 					translate([15.558,48.895])circle(r=0.406,$fn=$fn); //LED3MM K
 					translate([9.843,5.397])circle(r=0.406,$fn=$fn); //LED3MM A
 					translate([12.383,5.397])circle(r=0.406,$fn=$fn); //LED3MM K
-					translate([34.925,18.098])circle(r=0.406,$fn=$fn); //LED3MM A
-					translate([37.465,18.098])circle(r=0.406,$fn=$fn); //LED3MM K
-					translate([28.893,5.397])circle(r=0.406,$fn=$fn); //LED3MM A
-					translate([31.433,5.397])circle(r=0.406,$fn=$fn); //LED3MM K
+					translate([35.560,18.733])circle(r=0.406,$fn=$fn); //LED3MM A
+					translate([38.100,18.733])circle(r=0.406,$fn=$fn); //LED3MM K
+					translate([28.575,5.397])circle(r=0.406,$fn=$fn); //LED3MM A
+					translate([31.115,5.397])circle(r=0.406,$fn=$fn); //LED3MM K
 					translate([19.685,4.763])circle(r=0.406,$fn=$fn); //LED3MM A
 					translate([22.225,4.763])circle(r=0.406,$fn=$fn); //LED3MM K
 					translate([19.072,39.602])circle(r=0.406,$fn=$fn); //LED3MM A
@@ -73,26 +74,27 @@ module SimpleLedEgg(){
 			if (holewithorigin) 
 			{
 				//Print a little cross in the PCB holes 
+					translate([20.479,53.340]) { polygon([[0,0],[-0.13,-0.13],[-0.13,0.13]]); polygon([[0,0],[0.13,0.13],[0.13,-0.13]]);} //Hole
 			}
 		} //end union() // PCB 
 		if (Detailgrad > 10) color("#DFDDE0",1) translate([0,0,board_thickness-0.017]) linear_extrude(height=0.040,center=false, convexity=10) difference()  { 
 	  union() { 
-					translate([3.591,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([6.131,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+					translate([2.638,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([5.178,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([5.397,31.115]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([7.938,31.115]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([7.899,41.257]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([10.439,41.257]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([12.700,23.178]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([15.240,23.178]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([12.700,23.495]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([15.240,23.495]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([13.018,48.895]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([15.558,48.895]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([9.843,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([12.383,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([34.925,18.098]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([37.465,18.098]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([28.893,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([31.433,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([35.560,18.733]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([38.100,18.733]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([28.575,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([31.115,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([19.685,4.763]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([22.225,4.763]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([19.072,39.602]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
@@ -122,22 +124,22 @@ module SimpleLedEgg(){
 			translate([26.988,34.290]) rotate([0,0,180.000]) EaglePad([1.321,2.642], 100); //SIL8 7
 			translate([29.527,34.290]) rotate([0,0,180.000]) EaglePad([1.321,2.642], 100); //SIL8 8
 		}
-			translate([3.591,17.976]) circle(r=0.406,$fn=$fn);
-			translate([6.131,17.976]) circle(r=0.406,$fn=$fn);
+			translate([2.638,17.976]) circle(r=0.406,$fn=$fn);
+			translate([5.178,17.976]) circle(r=0.406,$fn=$fn);
 			translate([5.397,31.115]) circle(r=0.406,$fn=$fn);
 			translate([7.938,31.115]) circle(r=0.406,$fn=$fn);
 			translate([7.899,41.257]) circle(r=0.406,$fn=$fn);
 			translate([10.439,41.257]) circle(r=0.406,$fn=$fn);
-			translate([12.700,23.178]) circle(r=0.406,$fn=$fn);
-			translate([15.240,23.178]) circle(r=0.406,$fn=$fn);
+			translate([12.700,23.495]) circle(r=0.406,$fn=$fn);
+			translate([15.240,23.495]) circle(r=0.406,$fn=$fn);
 			translate([13.018,48.895]) circle(r=0.406,$fn=$fn);
 			translate([15.558,48.895]) circle(r=0.406,$fn=$fn);
 			translate([9.843,5.397]) circle(r=0.406,$fn=$fn);
 			translate([12.383,5.397]) circle(r=0.406,$fn=$fn);
-			translate([34.925,18.098]) circle(r=0.406,$fn=$fn);
-			translate([37.465,18.098]) circle(r=0.406,$fn=$fn);
-			translate([28.893,5.397]) circle(r=0.406,$fn=$fn);
-			translate([31.433,5.397]) circle(r=0.406,$fn=$fn);
+			translate([35.560,18.733]) circle(r=0.406,$fn=$fn);
+			translate([38.100,18.733]) circle(r=0.406,$fn=$fn);
+			translate([28.575,5.397]) circle(r=0.406,$fn=$fn);
+			translate([31.115,5.397]) circle(r=0.406,$fn=$fn);
 			translate([19.685,4.763]) circle(r=0.406,$fn=$fn);
 			translate([22.225,4.763]) circle(r=0.406,$fn=$fn);
 			translate([19.072,39.602]) circle(r=0.406,$fn=$fn);
@@ -193,22 +195,22 @@ module SimpleLedEgg(){
 	  union() { 
 					translate([35.242,14.288]) rotate([0,0,90.000]) square([3.600,2.600], center = true); //CR2032H_SMD +
 			translate([5.397,14.288]) rotate([0,0,90.000]) square([3.600,2.600], center = true); //CR2032H_SMD -
-			translate([3.591,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([6.131,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([2.638,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([5.178,17.976]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([5.397,31.115]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([7.938,31.115]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([7.899,41.257]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([10.439,41.257]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([12.700,23.178]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([15.240,23.178]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([12.700,23.495]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([15.240,23.495]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([13.018,48.895]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([15.558,48.895]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([9.843,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([12.383,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([34.925,18.098]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([37.465,18.098]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([28.893,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
-			translate([31.433,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([35.560,18.733]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([38.100,18.733]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([28.575,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
+			translate([31.115,5.397]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([19.685,4.763]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([22.225,4.763]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
 			translate([19.072,39.602]) rotate([0,0,22.500]) circle(r=0.715,$fn=8);
@@ -237,25 +239,25 @@ module SimpleLedEgg(){
 			translate([24.448,34.290]) rotate([0,0,180.000]) EaglePad([1.321,2.642], 100); //SIL8 6
 			translate([26.988,34.290]) rotate([0,0,180.000]) EaglePad([1.321,2.642], 100); //SIL8 7
 			translate([29.527,34.290]) rotate([0,0,180.000]) EaglePad([1.321,2.642], 100); //SIL8 8
-			translate([31.238,28.258]) rotate([0,0,180.000]) square([5.080,2.540], center = true); //BTSW_SMD 1
-			translate([10.037,28.258]) rotate([0,0,180.000]) square([5.080,2.540], center = true); //BTSW_SMD 2
+			translate([31.873,28.258]) rotate([0,0,180.000]) square([5.080,2.540], center = true); //BTSW_SMD 1
+			translate([10.673,28.258]) rotate([0,0,180.000]) square([5.080,2.540], center = true); //BTSW_SMD 2
 		}
-			translate([3.591,17.976]) circle(r=0.406,$fn=$fn);
-			translate([6.131,17.976]) circle(r=0.406,$fn=$fn);
+			translate([2.638,17.976]) circle(r=0.406,$fn=$fn);
+			translate([5.178,17.976]) circle(r=0.406,$fn=$fn);
 			translate([5.397,31.115]) circle(r=0.406,$fn=$fn);
 			translate([7.938,31.115]) circle(r=0.406,$fn=$fn);
 			translate([7.899,41.257]) circle(r=0.406,$fn=$fn);
 			translate([10.439,41.257]) circle(r=0.406,$fn=$fn);
-			translate([12.700,23.178]) circle(r=0.406,$fn=$fn);
-			translate([15.240,23.178]) circle(r=0.406,$fn=$fn);
+			translate([12.700,23.495]) circle(r=0.406,$fn=$fn);
+			translate([15.240,23.495]) circle(r=0.406,$fn=$fn);
 			translate([13.018,48.895]) circle(r=0.406,$fn=$fn);
 			translate([15.558,48.895]) circle(r=0.406,$fn=$fn);
 			translate([9.843,5.397]) circle(r=0.406,$fn=$fn);
 			translate([12.383,5.397]) circle(r=0.406,$fn=$fn);
-			translate([34.925,18.098]) circle(r=0.406,$fn=$fn);
-			translate([37.465,18.098]) circle(r=0.406,$fn=$fn);
-			translate([28.893,5.397]) circle(r=0.406,$fn=$fn);
-			translate([31.433,5.397]) circle(r=0.406,$fn=$fn);
+			translate([35.560,18.733]) circle(r=0.406,$fn=$fn);
+			translate([38.100,18.733]) circle(r=0.406,$fn=$fn);
+			translate([28.575,5.397]) circle(r=0.406,$fn=$fn);
+			translate([31.115,5.397]) circle(r=0.406,$fn=$fn);
 			translate([19.685,4.763]) circle(r=0.406,$fn=$fn);
 			translate([22.225,4.763]) circle(r=0.406,$fn=$fn);
 			translate([19.072,39.602]) circle(r=0.406,$fn=$fn);
@@ -288,7 +290,122 @@ module SimpleLedEgg(){
 		}
 		if (EnableWires && (Detailgrad > 12)) color("#7C770F",1) translate([0,0,-0.017]) linear_extrude(height=0.035,center=false, convexity=10) difference()  { 
 	  union() { 
-				}
+				EagleWire([5.397,14.288],[5.397,17.463],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([5.397,17.463],[5.911,17.976],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([5.911,17.976],[5.178,17.976],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.430,44.768],[11.430,43.815],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.430,43.815],[13.018,42.227],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.018,42.227],[13.018,38.100],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.018,38.100],[11.748,36.830],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.748,36.830],[11.748,34.290],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.748,29.333],[10.673,28.258],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.748,34.290],[11.748,29.333],startdot=0,enddot=0,width=0.406,$fn=9);
+		EagleWire([13.970,44.768],[13.970,45.085],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.970,45.085],[13.916,45.496],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.916,45.496],[13.757,45.879],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.757,45.879],[13.505,46.208],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.505,46.208],[13.176,46.460],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.176,46.460],[12.793,46.618],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([12.793,46.618],[12.383,46.672],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([12.383,46.672],[11.430,46.672],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.430,46.672],[11.101,46.629],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.101,46.629],[10.795,46.502],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.795,46.502],[10.532,46.301],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.532,46.301],[10.330,46.038],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.330,46.038],[10.203,45.731],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.203,45.731],[10.160,45.403],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.160,45.403],[10.160,43.498],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.160,43.498],[10.192,43.251],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.192,43.251],[10.288,43.021],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.288,43.021],[10.439,42.824],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.439,42.824],[10.636,42.673],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.636,42.673],[10.866,42.577],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.866,42.577],[11.113,42.545],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.113,42.545],[12.065,41.593],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([12.065,41.593],[12.065,38.418],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([5.397,31.750],[5.397,31.115],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([12.065,38.418],[5.397,31.750],startdot=0,enddot=0,width=0.406,$fn=9);
+		EagleWire([16.510,44.768],[16.510,45.403],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.510,45.403],[16.463,45.919],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.463,45.919],[16.284,46.405],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.284,46.405],[15.985,46.829],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([15.985,46.829],[15.587,47.161],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([15.587,47.161],[15.116,47.378],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([15.116,47.378],[14.605,47.466],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([14.605,47.466],[11.113,47.466],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([11.113,47.466],[10.625,47.360],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.625,47.360],[10.181,47.132],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([10.181,47.132],[9.812,46.796],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.812,46.796],[9.542,46.376],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.542,46.376],[9.390,45.901],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.390,45.901],[9.366,45.403],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.366,45.403],[9.366,42.565],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.366,42.565],[7.899,41.257],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([19.050,44.768],[19.050,47.625],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([19.050,47.625],[16.510,50.165],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.510,50.165],[13.970,50.165],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.970,50.165],[13.018,49.213],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.018,49.213],[13.018,48.895],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([21.590,44.768],[21.590,43.180],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([21.590,43.180],[19.050,40.640],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([19.050,40.640],[19.050,39.623],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([19.050,39.623],[19.072,39.602],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([24.130,44.768],[24.130,47.943],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([24.130,47.943],[25.088,48.901],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([25.088,48.901],[25.088,48.919],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([26.670,44.768],[26.670,42.863],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([33.973,35.560],[33.973,31.750],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([26.670,42.863],[33.973,35.560],startdot=0,enddot=0,width=0.406,$fn=9);
+		EagleWire([29.210,44.768],[31.115,42.863],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([31.115,42.863],[31.115,41.256],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([31.115,40.958],[31.115,41.256],startdot=1,enddot=0,width=0.406,$fn=9);
+		EagleWire([31.115,41.256],[31.096,41.275],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([14.288,34.290],[14.288,33.337],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([14.288,33.337],[17.145,30.480],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([17.145,25.241],[16.828,24.924],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.828,24.924],[13.335,24.924],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([13.335,24.924],[12.700,24.289],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([12.700,24.289],[12.700,23.495],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([17.145,30.480],[17.145,25.241],startdot=0,enddot=0,width=0.406,$fn=9);
+		EagleWire([16.828,34.290],[16.828,32.385],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.828,32.385],[18.098,31.115],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([18.098,31.115],[18.098,22.860],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([18.098,22.860],[16.986,21.749],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([16.986,21.749],[6.033,21.749],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([6.033,21.749],[3.651,19.367],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([3.651,19.367],[2.638,18.317],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([2.638,18.317],[2.638,17.976],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.843,5.397],[9.843,8.572],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([9.843,8.572],[19.367,18.098],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([19.367,18.098],[19.367,34.290],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([24.448,34.290],[24.448,32.385],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([24.448,32.385],[23.495,31.433],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([23.495,31.433],[23.495,13.970],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([23.495,13.970],[28.575,8.890],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([28.575,8.890],[28.575,5.715],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([28.575,5.715],[28.258,5.397],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([28.258,5.397],[28.575,5.397],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([21.908,34.290],[21.908,9.525],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([21.908,9.525],[19.685,7.303],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([19.685,7.303],[19.685,4.763],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([26.988,34.290],[26.988,32.703],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([26.988,32.703],[24.765,30.480],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([24.765,30.480],[24.765,22.225],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([28.258,18.733],[35.560,18.733],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([24.765,22.225],[28.258,18.733],startdot=0,enddot=0,width=0.406,$fn=9);
+		EagleWire([29.527,34.290],[29.527,32.068],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([29.527,32.068],[27.623,32.068],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([27.623,32.068],[25.718,30.163],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([25.718,30.163],[25.718,23.495],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([25.718,23.495],[28.258,23.495],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([35.242,14.288],[35.878,13.970],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([39.053,25.400],[36.195,28.258],startdot=1,enddot=1,width=0.406,$fn=9);
+		EagleWire([36.195,28.258],[31.750,28.258],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([35.878,13.970],[39.370,17.463],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([39.370,17.463],[39.370,19.685],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([39.370,19.685],[39.053,20.003],startdot=0,enddot=1,width=0.406,$fn=9);
+		EagleWire([39.053,20.003],[39.053,25.400],startdot=0,enddot=0,width=0.406,$fn=9);
+		}
 
 		}
 			if (EnablePolygones) {
@@ -310,14 +427,14 @@ module SimpleLedEgg(){
 		if(EnableParts) union() // parts 
 		{
 			translate([20.320,14.288,0])rotate([180,0,180])CR2032H_SMD(Name="G1",Value="CR2032H_SMD",Library="battery"); 
-			translate([4.861,17.976,board_thickness])LED3MM(Name="LED1",Value="white",Library="led"); 
+			translate([3.908,17.976,board_thickness])LED3MM(Name="LED1",Value="white",Library="led"); 
 			translate([6.668,31.115,board_thickness])LED3MM(Name="LED3",Value="blue",Library="led"); 
 			translate([9.169,41.257,board_thickness])LED3MM(Name="LED4",Value="Lime",Library="led"); 
-			translate([13.970,23.178,board_thickness])LED3MM(Name="LED6",Value="white",Library="led"); 
+			translate([13.970,23.495,board_thickness])LED3MM(Name="LED6",Value="white",Library="led"); 
 			translate([14.288,48.895,board_thickness])LED3MM(Name="LED7",Value="Red",Library="led"); 
 			translate([11.113,5.397,board_thickness])LED3MM(Name="LED8",Value="Red",Library="led"); 
-			translate([36.195,18.098,board_thickness])LED3MM(Name="LED11",Value="white",Library="led"); 
-			translate([30.163,5.397,board_thickness])LED3MM(Name="LED12",Value="blue",Library="led"); 
+			translate([36.830,18.733,board_thickness])LED3MM(Name="LED11",Value="white",Library="led"); 
+			translate([29.845,5.397,board_thickness])LED3MM(Name="LED12",Value="blue",Library="led"); 
 			translate([20.955,4.763,board_thickness])LED3MM(Name="LED14",Value="Red",Library="led"); 
 			translate([20.341,39.602,board_thickness])LED3MM(Name="LED15",Value="Lime",Library="led"); 
 			translate([26.359,48.919,board_thickness])LED3MM(Name="LED16",Value="Red",Library="led"); 
@@ -326,7 +443,7 @@ module SimpleLedEgg(){
 			translate([35.242,31.750,board_thickness])LED3MM(Name="LED20",Value="blue",Library="led"); 
 			translate([20.320,44.768,board_thickness])SIL8(Name="RN1",Value="",Library="resistor-sil"); 
 			translate([20.637,34.290,board_thickness])SIL8(Name="RN2",Value="",Library="resistor-sil"); 
-			translate([20.637,28.258,0])rotate([180,0,180])BTSW_SMD(Name="S1",Value="BTSWSMD",Library="DIY-Parts"); 
+			translate([21.273,28.258,0])rotate([180,0,180])BTSW_SMD(Name="S1",Value="BTSWSMD",Library="DIY-Parts"); 
 		} //endunion() 
 	} // // PCB whith parts and text  
 	module CR2032H_SMD(Name="",Value="",Library="battery")
@@ -340,7 +457,7 @@ module SimpleLedEgg(){
 	}
 	module LED3MM(Name="",Value="",Library="led")
 	{
-		// X1=-2.032, Y1=-2.032, X2=1.575, Y2=2.032, Ex=4.861, Ey=17.976, a=
+		// X1=-2.032, Y1=-2.032, X2=1.575, Y2=2.032, Ex=3.908, Ey=17.976, a=
 		if (HideAutogeneratedParts) {
 			InvisiblePart(); } 
 		else {
@@ -358,7 +475,7 @@ module SimpleLedEgg(){
 	}
 	module BTSW_SMD(Name="",Value="",Library="DIY-Parts")
 	{
-		// X1=-13.100, Y1=-4.000, X2=13.100, Y2=4.000, Ex=20.637, Ey=28.258, a=180
+		// X1=-13.100, Y1=-4.000, X2=13.100, Y2=4.000, Ex=21.273, Ey=28.258, a=180
 		if (HideAutogeneratedParts) {
 			InvisiblePart(); } 
 		else {
@@ -373,7 +490,28 @@ module SimpleLedEgg(){
 
 module InvisiblePart() { rotate([0,0,0]);}
 
- 
+ module EagleWire(start,end,width=0.4,poly=true,startdot=true,enddot=true,$fn=9) // hull() n.a. in FreeCAD
+{
+ 	function bogen(point=[0,0], r = 1 ,phase = 0, winkel = 90, $fn=$fn) = [let(num=abs($fn*winkel/360)) for (i=[0:num], x=i*winkel/num) [point[0]+r*cos(x+phase),point[1]+r*sin(x+phase)]]; 
+	function winkel(a,b=[0,0]) = atan2(a[1]-b[1],a[0]-b[0]);
+	if (poly)
+	{
+		fns = (startdot) ? $fn : 2;
+		fne = (enddot) ? $fn : 2;
+		polygon(concat(bogen(point=start, r=width/2 ,phase = winkel(start,end)-90, winkel = 180, $fn=fns), bogen(point=end, r=width/2 ,phase = winkel(end,start)-90, winkel = 180, $fn=fne)));
+	}
+	else
+	{
+		length = sqrt(pow(start[0]-end[0],2)+pow(start[1]-end[1],2));
+		if (startdot) {translate(start) circle(width/2,$fn=$fn);}
+		if (length > 0)
+		{
+			if (enddot) {translate(end) circle(width/2,$fn=$fn);}
+			translate(end) rotate([0,0,winkel(start,end)]) translate([0,-width/2]) square([length , width]);
+		}
+	}
+}
+
 module EaglePad(size,roundness,$fn=$fn) 
 {
  	function bogen(point=[0,0], r = 1 ,phase = 0, winkel = 90, $fn=$fn) = [let(num=abs($fn*winkel/360)) for (i=[0:num], x=i*winkel/num) [point[0]+r*cos(x+phase),point[1]+r*sin(x+phase)]]; 
